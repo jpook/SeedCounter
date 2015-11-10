@@ -1,8 +1,5 @@
 package com.seedcounter.ui;
 
-import com.seedcounter.db.entities.Seedbag;
-import com.seedcounter.presenter.SeedbagPresenter;
-
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -12,12 +9,18 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import com.seedcounter.db.entities.Seedbag;
+import com.seedcounter.presenter.SeedbagPresenter;
+
 public class ApplicationUI extends Application {
 
 	SeedbagPresenter presenter;
 	TableView tableView;
 
 	public static void main(String[] args) {
+		SeedbagPresenter p = new SeedbagPresenter();
+		SeedCounterView view = new SeedCounterView(p);
+		p.setView(view);
 		launch(args);
 	}
 
