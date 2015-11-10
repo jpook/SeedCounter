@@ -10,28 +10,28 @@ import com.seedcounter.db.entities.Seedbag;
  * Singleton
  * Service class for all db operations with Seedbag class
  */
-public class SeedbagService {
+public class SeedbagModel {
 
 	private EntityManagerFactory emf;
 	private EntityManager em;
 
-	private static SeedbagService instance;
+	private static SeedbagModel instance;
 
 	/*
 	 * EntityManagerFactory and EntityManager should be created only once due to
 	 * performance
 	 */
-	protected SeedbagService() {
+	protected SeedbagModel() {
 		emf = Persistence.createEntityManagerFactory("persistence");
 		em = emf.createEntityManager();
 	}
 
 	/*
-	 * access method to access SeedbagService as Singleton
+	 * access method to access SeedbagModel as Singleton
 	 */
-	public static SeedbagService getInstance() {
+	public static SeedbagModel getInstance() {
 		if (instance == null) {
-			instance = new SeedbagService();
+			instance = new SeedbagModel();
 		}
 		return instance;
 	}

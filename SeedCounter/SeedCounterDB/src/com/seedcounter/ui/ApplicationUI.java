@@ -1,7 +1,7 @@
 package com.seedcounter.ui;
 
 import com.seedcounter.db.entities.Seedbag;
-import com.seedcounter.presenter.Presenter;
+import com.seedcounter.presenter.SeedbagPresenter;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -12,9 +12,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class SeedCounterUI extends Application {
+public class ApplicationUI extends Application {
 
-	Presenter presenter;
+	SeedbagPresenter presenter;
 	TableView tableView;
 
 	public static void main(String[] args) {
@@ -23,7 +23,7 @@ public class SeedCounterUI extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		presenter = new Presenter();
+		presenter = new SeedbagPresenter();
 		primaryStage.setTitle("SeedCounter");
 		Button btnCreate = new Button();
 		btnCreate.setText("create new Seeedbag");

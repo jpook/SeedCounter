@@ -1,15 +1,15 @@
 package com.seedcounter.presenter;
 
 import com.seedcounter.db.entities.Seedbag;
-import com.seedcounter.db.services.SeedbagService;
+import com.seedcounter.db.services.SeedbagModel;
 
-public class Presenter {
+public class SeedbagPresenter {
 
-	SeedbagService service;
+	SeedbagModel service;
 
-	public Presenter() {
+	public SeedbagPresenter() {
 		super();
-		service = SeedbagService.getInstance();
+		service = SeedbagModel.getInstance();
 	}
 
 	public void doSomething() {
